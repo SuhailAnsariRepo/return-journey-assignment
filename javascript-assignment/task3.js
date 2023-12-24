@@ -1,25 +1,25 @@
 function findCommonElements(arr1, arr2) {
-  const hMap = {};
+  const map = {};
   const commonElements = [];
   for(let i=0; i<arr1.length; i++) {
     const num = arr1[i];
-    if (num in hMap) {
-      hMap[num] += 1;
+    if (num in map) {
+      map[num] += 1;
     } else {
-      hMap[num] = 1;
+      map[num] = 1;
     }
   }
   for(let i=0; i<arr2.length; i++) {
     const num = arr2[i];
-    if (num in hMap) {
-      hMap[num] += 1;
+    if (num in map) {
+      map[num] += 1;
     } else {
-      hMap[num] = 1;
+      map[num] = 1;
     }
   }
 
-  for (num in hMap) {
-    if (hMap[num] == 2) {
+  for (num in map) {
+    if (map[num] == 2) {
       commonElements.push(num);
     }
   }

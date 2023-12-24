@@ -1,15 +1,15 @@
 function removeDuplicates(arr) {
-  const hMap = {};
+  const map = {};
   const result = [];
   for (let i=0; i<arr.length; i++) {
     const num = arr[i];
-    if (num in hMap) {
-      hMap[num] += 1;
+    if (num in map) {
+      map[num] += 1;
     } else {
-      hMap[num] = 1;
+      map[num] = 1;
     }
 
-    if (hMap[num] == 1) {
+    if (map[num] == 1) {
       result.push(num);
     }
   }
